@@ -10,7 +10,7 @@ import Movie from "./Movies/Movie"
 export default function App () {
   const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
   const [movieList, setMovieList] = useState([]);
-
+  
   useEffect(() => {
     const getMovies = () => {
       axios
@@ -31,7 +31,7 @@ export default function App () {
   const addToSavedList = id => {
     // This is stretch. Prevent the same movie from being "saved" more than once
   };
-
+  console.log("0", movieList.data);
   return (
     <div>
       <SavedList list={[ /* This is stretch */]} />
