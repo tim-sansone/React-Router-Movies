@@ -1,9 +1,16 @@
 import React from 'react';
 
 export default function MovieCard (props) {
-  const { title, director, metascore, stars } = props.movie;
+
+ 
+  const { title, director, metascore, stars, id } = props.movie;
+  const { addToSavedList } = props;
   
-  
+  const saveMovie = (id, event) => {
+      event.preventDefault();
+      addToSavedList(id);
+   }
+
   return (
     <div className="save-wrapper">
       <div className="movie-card">
@@ -23,7 +30,7 @@ export default function MovieCard (props) {
             ))
         }
       </div>
-      <div className="save-button">Save</div>
+      <div className="save-button" onClick={event => saveMovie(id, event)}>Save</div>
     </div>
   );
 }
