@@ -68,5 +68,12 @@ body {
 
 .home-button {
   padding: 5px 10px;
+  margin-bottom: 5px;;
   background-color: lightskyblue;
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
+  font-size: 1.2rem;
 }

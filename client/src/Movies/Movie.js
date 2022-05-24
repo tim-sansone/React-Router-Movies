@@ -10,6 +10,7 @@ export default function Movie(props) {
   const { id } = useParams();
   
   
+  
   useEffect(() => {
     axios
       .get(`http://localhost:5001/api/movies/${id}`)
@@ -20,7 +21,7 @@ export default function Movie(props) {
         console.error(error);
       });
     
-  }, []);
+  }, [id]);
 
   
   if (!movie) {

@@ -1,7 +1,11 @@
 import React from 'react';
+import { useRouteMatch } from "react-router-dom"
 
 export default function MovieCard (props) {
 
+  const { url, path } = useRouteMatch();
+  console.log(url);
+  console.log(path);
  
   const { title, director, metascore, stars, id } = props.movie;
   const { addToSavedList } = props;

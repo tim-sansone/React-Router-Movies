@@ -43,7 +43,7 @@ export default function App () {
   
   return (
     <div>
-      <SavedList list={saved} />
+      <SavedList list={saved} setSaved={setSaved}/>
       <Switch>
         <Route path="/movies/:id">
           <Movie addToSavedList={addToSavedList}/>
